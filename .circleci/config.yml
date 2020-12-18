@@ -1,0 +1,11 @@
+version: 2.1
+jobs: 
+  build: 
+    machine: 
+      image: 'ubuntu-2004:202010-01' 
+    steps: 
+      - checkout # check out the code in the project directory
+      - run: |
+          wget -O bashbrew https://doi-janky.infosiftr.net/job/bashbrew/job/master/lastSuccessfulBuild/artifact/bashbrew-amd64
+          chmod +x ./bashbrew
+          ./bashbrew -h
