@@ -12,5 +12,5 @@ jobs:
           ./bashbrew build -h
           ./bashbrew push -h
       - run: |
-          ./bashbrew ls --all .
+          ./bashbrew ls --all ./library
       - run: ./bashbrew build --all
